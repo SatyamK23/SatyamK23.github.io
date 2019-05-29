@@ -83,7 +83,3 @@ The reason for using softmax distribution is that categorical distribution is mo
 
 The generated samples are later converted into audio using $$ \mu $$-law expansion transformation, which is the inverse of $$\mu$$-law compounding transformation.
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c45234b4a58aaf6e0fe7ce41754ea3c6c77d78d4
