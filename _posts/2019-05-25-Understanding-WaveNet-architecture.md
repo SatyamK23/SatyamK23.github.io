@@ -6,9 +6,9 @@ mathjax: true
 comments: true
 tags: neural-network machine-learning
 ---
-WaveNet {% cite Oord2016WaveNetAG %} is deep autoregressive, generative model, which takes raw audio as inputand produces human-like sound. This has brought new dynamics in speech synthesis. WaveNet is combines two ideas, which are Wavelet transform and Neural networks.
+WaveNet is deep autoregressive, generative model, which takes raw audio as inputand produces human-like sound. This has brought new dynamics in speech synthesis. WaveNet is combines two ideas, which are Wavelet transform and Neural networks.
 
-As given in original paper, it was stated that speech of human in raw form is generally represented as a sequence of 16 bit and it  produces total of  $$ 2^{16} $$ (65536) quantization values. This quantization values has to be processed through softmax, as 65536 neurons would be required. Hence making this computationally expensive. The need for reducing the sequence to 8 bits was required. This is done using $$ \mu $$-law transformation {% cite ITU88 %},which is represented as $$ F(x) = sign(x) \frac{ln(1+ \mu \lvert x \rvert)}{(1+\mu)} $$, -1 ≤ x ≤ 1, where $$ \mu $$ takes value from 0 to 255 and x denotes input samples and then quantize to 256 values.
+As given in original paper, it was stated that speech of human in raw form is generally represented as a sequence of 16 bit and it  produces total of  $$ 2^{16} $$ (65536) quantization values. This quantization values has to be processed through softmax, as 65536 neurons would be required. Hence making this computationally expensive. The need for reducing the sequence to 8 bits was required. This is done using $$ \mu $$-law transformation,which is represented as $$ F(x) = sign(x) \frac{ln(1+ \mu \lvert x \rvert)}{(1+\mu)} $$, -1 ≤ x ≤ 1, where $$ \mu $$ takes value from 0 to 255 and x denotes input samples and then quantize to 256 values.
 
 
 The first step in an audio preprocessing step requires converting input waveform to quantized values, which has fixed integer range. The integer
@@ -50,7 +50,7 @@ and $$ W_{f} $$ , and $$ W_{g} $$ , are weight matrix of filters and gate respec
 
 ## Residual block and Skip Connections
 
-The use of residual block and skip channels is inspired from PixelCNN architecture {% cite Oord:2016:CIG:3157382.3157633 %} for images. Both residual and parameterized skip connections are used throughout the network, to speed up convergence and enable training of much deeper models.
+The use of residual block and skip channels is inspired from PixelCNN architecture for images. Both residual and parameterized skip connections are used throughout the network, to speed up convergence and enable training of much deeper models.
 ![Residual Network](/assets/WaveNet.png)
 *Overview of residual block and complete architecture.*
 
@@ -83,5 +83,3 @@ The reason for using softmax distribution is that categorical distribution is mo
 
 The generated samples are later converted into audio using $$ \mu $$-law expansion transformation, which is the inverse of $$\mu$$-law compounding transformation.
 
-### References
-{% bibliography --cited %}
