@@ -9,13 +9,16 @@ Chess is simplified version of our life. In chess the player has to think of jus
 
 Few quotes of chess Grand Master who have related some aspect of life with chess[^1]
 >That’s what chess is all about. One day you give your opponent a lesson, the next day he gives you one. 
->&mdash<cite>Bobby Fischer</cite>
+>-- <cite>Bobby Fischer</cite>
+
+>If you wish to succeed you must brave the risk of failure.
+>-- <cite>Garry Kasparov</cite>
 
 >Life is like a game of chess. I cannot undo the moves but I can make the next step better. 
->&mdash Edwin Tan 
+>-- <cite>Edwin Tan</cite> 
 
 >In life, unlike chess, the game continues after checkmate.  
->&mdash Isaac Asimov 
+>-- <cite>Isaac Asimov</cite>
 
 ## Analogy of chess piece with Life
 Here is my analogy for following pieces in chess board:
